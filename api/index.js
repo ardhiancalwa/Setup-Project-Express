@@ -1,6 +1,6 @@
 // 1. Mengimpor modul express
 const express = require("express");
-const db = require("./models");
+const db = require("../models");
 const morgan = require("morgan");
 require("dotenv").config();
 // 2. Membuat instance dari aplikasi express
@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-const userRoutes = require("./src/routes/user.routes");
-const authRoutes = require("./src/routes/auth.routes");
+const userRoutes = require("../src/routes/user.routes");
+const authRoutes = require("../src/routes/auth.routes");
 
 
 app.use("/api/users", userRoutes);
