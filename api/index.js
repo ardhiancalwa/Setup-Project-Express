@@ -3,6 +3,7 @@ const express = require("express");
 const db = require("../models");
 const morgan = require("morgan");
 require("dotenv").config();
+const serverless = require("serverless-http");
 // 2. Membuat instance dari aplikasi express
 const app = express();
 app.use(express.json());
@@ -38,3 +39,4 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
 });
+module.exports.handler = serverless(app);
