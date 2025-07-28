@@ -16,11 +16,17 @@ module.exports = {
     host: "127.0.0.1",
     dialect: "mysql",
   },
-  production: {
+ production: {
     username: "neondb_owner",
     password: "npg_F0vmwrDdIY1l",
-    database: "test_db",
+    database: "neondb",
     host: "ep-curly-fog-adgpu7ie-pooler.c-2.us-east-1.aws.neon.tech",
     dialect: "postgres",
-  },
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
+  }
 };
