@@ -17,10 +17,10 @@ module.exports = {
     dialect: "mysql",
   },
   production: {
-    username: "root",
-    password: null,
-    database: "database_production",
-    host: "127.0.0.1",
-    dialect: "mysql",
+    username: "neondb_owner",
+    password: "npg_F0vmwrDdIY1l",
+    database: "test_db",
+    host: "ep-curly-fog-adgpu7ie-pooler.c-2.us-east-1.aws.neon.tech",
+    dialect: "postgres",
   },
 };
